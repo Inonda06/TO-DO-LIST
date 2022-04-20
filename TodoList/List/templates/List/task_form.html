@@ -1,0 +1,15 @@
+{% extends 'List/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">Go back</a> 
+</div>
+<h1>Task Form</h1>
+<div class="card-body">
+    <form method="POST" action="">
+        {%csrf_token%}
+        {{form.as_p}}
+        <input class="button" type="submit" value="submit">
+    </form>
+</div>
+{% endblock content %}
